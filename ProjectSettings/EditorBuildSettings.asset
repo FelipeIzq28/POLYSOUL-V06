@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Men\xFA Principal.unity"
+    guid: 1aec6697d7043604698de8f91c431e9a
+  - enabled: 1
+    path: Assets/Scenes/VideoIntro.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio.unity
+    guid: 30cbdebc9b63e224095d145d7a9a0e07
+  - enabled: 1
+    path: Assets/Scenes/AnimacionEntradaPortal.unity
+    guid: 50a0fb717fb8aa6478c7fb31b110b33c
+  - enabled: 1
+    path: Assets/Scenes/Mundo de los muertos 2.unity
+    guid: a4482789cfd13e341b14b6df7550e54f
+  - enabled: 0
+    path: Assets/Scenes/Mundo de los muertos 1.unity
+    guid: 0685ce9b33bf5ff48a6765acecc642f2
+  - enabled: 1
+    path: Assets/Scenes/Sala del jefe.unity
+    guid: 44618f21b811b244fac8afff142a6f4f
+  - enabled: 1
+    path: Assets/Scenes/Final Demo.unity
+    guid: 3079dcfaf1a6bff468c5e08876390cbe
+  m_configObjects: {}
