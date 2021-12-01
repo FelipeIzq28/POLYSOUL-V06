@@ -9,6 +9,7 @@ TagManager:
   - FragmentoRealidad
   - Enemy
   - HitBox
+  - Health
   layers:
   - Default
   - TransparentFX

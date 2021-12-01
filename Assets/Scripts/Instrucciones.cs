@@ -19,13 +19,21 @@ public class Instrucciones : MonoBehaviour
         {
             Time.timeScale = 1;
             instrucciones.SetActive(false);
-            ins = false;
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Time.timeScale = 0;
-        instrucciones.SetActive(true);
-        ins = true;
+        if (ins == false)
+        {
+            Time.timeScale = 0;
+            instrucciones.SetActive(true);
+            ins = true;
+        }
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        ins = false;
     }
 }

@@ -43,14 +43,20 @@ public class BarraDeCordura : MonoBehaviour
         if(corduraActual < 50)
         {
             lightPj.intensity = 0.5f;
+            lightPj.pointLightOuterRadius = 12;
+            lightPj.pointLightInnerRadius = 6;
         } 
         else if(corduraActual < 25)
         {
             lightPj.intensity = 0.2f;
+            lightPj.pointLightOuterRadius = 8;
+            lightPj.pointLightInnerRadius = 4;
         }
         else
         {
             lightPj.intensity = 0.7f;
+            lightPj.pointLightOuterRadius = 21.19f;
+            lightPj.pointLightInnerRadius = 11.79f;
         }
        
        

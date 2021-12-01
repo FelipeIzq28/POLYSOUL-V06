@@ -28,6 +28,10 @@ public class BarraDeVida : MonoBehaviour
             player.SetActive(false);
             Retry();
         }
+        if (vidaActual > 100)
+        {
+            vidaActual = 100;
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +39,10 @@ public class BarraDeVida : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             vidaActual = vidaActual - 25; 
+        }
+        if (collision.CompareTag("Health"))
+        {
+            vidaActual = vidaActual + 25;
         }
     }
     void Retry()
