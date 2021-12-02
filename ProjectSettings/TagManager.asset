@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - HitBox
   - Health
+  - Demon
   layers:
   - Default
   - TransparentFX

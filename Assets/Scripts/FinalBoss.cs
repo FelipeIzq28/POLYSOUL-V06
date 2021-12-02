@@ -8,6 +8,14 @@ public class FinalBoss : MonoBehaviour
     Animator myAnimator;
     float duracion = 0;
     float nextFire = 3;
+    float vida = 1000;
+
+    [SerializeField] GameObject disparo;
+    [SerializeField] Transform firePoint;
+    [SerializeField] GameObject efect;
+    [SerializeField] GameObject bulletPrefab;
+
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -20,7 +28,7 @@ public class FinalBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Ataque();
     }
     void Ataque()
     {
@@ -28,6 +36,29 @@ public class FinalBoss : MonoBehaviour
         {
             duracion = Time.time + nextFire;
             myAnimator.SetTrigger("attack");
+        }
+    }
+    public void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation) as GameObject;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("HitBox"))
+
+        {
+            Damage();
+        }
+    }
+    public void Damage()
+    {
+        vida -= 1;
+        Instantiate(efect, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), transform.rotation);
+        if (vida <= 0)
+        {
+
+            Destroy(this.gameObject);
         }
     }
 }
