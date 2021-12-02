@@ -14,7 +14,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] float vida;
     [SerializeField] Transform enemigo;
     [SerializeField] GameObject efect;
-
+    bool _facingRight = false;
     private GameObject _target;
     public float minX;
     public float maxX;
@@ -45,13 +45,15 @@ public class Enemies : MonoBehaviour
         if (_target.transform.position.x == minX)
         {
             _target.transform.position = new Vector2(maxX, transform.position.y);
-
+            Flip();
+            _facingRight = true;
         }
         //Si estamos en la derecha, cambiamos el Target a la izquierda
         else if (_target.transform.position.x == maxX)
         {
             _target.transform.position = new Vector2(minX, transform.position.y);
-
+            Flip();
+            _facingRight = false;
         }
 
     }
@@ -72,6 +74,13 @@ public class Enemies : MonoBehaviour
 
         StartCoroutine("PatrolToTarget");
 
+    }
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        float localScaleX = transform.localScale.x;
+        localScaleX = localScaleX * -1;
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
