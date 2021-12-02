@@ -7,11 +7,11 @@ public class FinalBoss : MonoBehaviour
     // Start is called before the first frame update
     Animator myAnimator;
     float duracion = 0;
-    float nextFire = 3;
+    float nextFire = 5;
     float vida = 1000;
 
-    [SerializeField] GameObject disparo;
     [SerializeField] Transform firePoint;
+    [SerializeField] Transform pj;
     [SerializeField] GameObject efect;
     [SerializeField] GameObject bulletPrefab;
 
@@ -28,19 +28,21 @@ public class FinalBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ataque();
+       StartCoroutine(Attack());
     }
-    void Ataque()
+    IEnumerator Attack()
     {
-        if(Time.time >= duracion)
-        {
-            duracion = Time.time + nextFire;
-            myAnimator.SetTrigger("attack");
-        }
+        myAnimator.SetTrigger("attack");
+
+        yield return new WaitForSeconds(3);
     }
+
     public void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation) as GameObject;
+        DisparoDemon disp = bullet.GetComponent<DisparoDemon>();
+        disp.x = pj.position.x;
+        disp.y = pj.position.y;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

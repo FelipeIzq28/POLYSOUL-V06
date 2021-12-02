@@ -5,7 +5,12 @@ using UnityEngine;
 public class DisparoDemon : MonoBehaviour
 {
     // Start is called before the first frame update
-    float speed = 10;
+    public float x;
+    public float y;
+
+    private float valorX;
+    private float valorY;
+    float speed = 15;
     [SerializeField] GameObject efect;
     void Start()
     {
@@ -15,7 +20,9 @@ public class DisparoDemon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector2(-1 * Time.deltaTime * speed, 0));
+        valorX = x;
+        valorY = y;
+        transform.Translate(new Vector2(-1 * Time.deltaTime * speed,Time.deltaTime * -2));
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

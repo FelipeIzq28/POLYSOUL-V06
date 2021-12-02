@@ -9,6 +9,7 @@ public class BarraDeVida : MonoBehaviour
     public Image barra;
     [SerializeField] GameObject canvaRetry;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject portal;
  
 
     public float vidaActual;
@@ -16,6 +17,7 @@ public class BarraDeVida : MonoBehaviour
     void Start()
     {
         canvaRetry.SetActive(false);
+        portal.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class BarraDeVida : MonoBehaviour
     {
         barra.fillAmount = vidaActual / vidaMaxima;
 
-        if (vidaActual == 0)
+        if (vidaActual <= 0)
         {
             player.SetActive(false);
             Retry();
@@ -31,6 +33,11 @@ public class BarraDeVida : MonoBehaviour
         if (vidaActual > 100)
         {
             vidaActual = 100;
+        }
+
+        if (vidaActual < 30)
+        {
+            portal.SetActive(true);
         }
     }
     

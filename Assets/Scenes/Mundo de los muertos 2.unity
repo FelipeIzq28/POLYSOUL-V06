@@ -3180,6 +3180,7 @@ MonoBehaviour:
   barra: {fileID: 672643050}
   canvaRetry: {fileID: 995091031}
   player: {fileID: 100529056}
+  portal: {fileID: 0}
   vidaActual: 100
   vidaMaxima: 100
 --- !u!70 &403372720
@@ -28155,6 +28156,22 @@ PrefabInstance:
       propertyPath: minX
       value: 61.7
       objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5633698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.8760376
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.26055908
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.26055908
+      objectReference: {fileID: 0}
     - target: {fileID: 6534233315686955005, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
       propertyPath: m_Name
       value: Enem Nvl 2 (1)
@@ -28377,6 +28394,7 @@ MonoBehaviour:
   barra: {fileID: 672643050}
   canvaRetry: {fileID: 995091031}
   player: {fileID: 1899745489}
+  portal: {fileID: 0}
   vidaActual: 100
   vidaMaxima: 100
 --- !u!61 &1850725629
@@ -30466,6 +30484,22 @@ PrefabInstance:
       propertyPath: minX
       value: -228.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9818726
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1922607
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.070129395
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.21039581
+      objectReference: {fileID: 0}
     - target: {fileID: 6534233315686955005, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
       propertyPath: m_Name
       value: Enem Nvl 2
@@ -32003,6 +32037,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51d1316ec50a59f4f846aad62d907fae, type: 3}
+--- !u!1 &265842523820091354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 265842522297195089, guid: 51d1316ec50a59f4f846aad62d907fae, type: 3}
+  m_PrefabInstance: {fileID: 265842523820091353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &265842523820091355
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265842523820091354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b08666ee200aa8e49a22c06ecc9573ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3227339442973917632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32074,6 +32132,22 @@ PrefabInstance:
     - target: {fileID: 2302469920113087964, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
       propertyPath: minX
       value: -86.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6586418
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6217775
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.12900352
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734907585805285144, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.47916162
       objectReference: {fileID: 0}
     - target: {fileID: 6534233315686955005, guid: 0e01b55af4ac646408a59cd6f47747c5, type: 3}
       propertyPath: m_Name
