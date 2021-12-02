@@ -12,6 +12,7 @@ public class VideoIntro : MonoBehaviour
     public VideoPlayer video;
 
     [SerializeField] GameManager gm;
+    public int escena;
     private void Awake()
     {
         video = GetComponent<VideoPlayer>();
@@ -32,6 +33,6 @@ public class VideoIntro : MonoBehaviour
     }
     void CheckOver(VideoPlayer vp)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(escena);
     }
 }
