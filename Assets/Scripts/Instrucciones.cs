@@ -15,7 +15,7 @@ public class Instrucciones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && ins == true)
+        if (Input.GetKeyDown(KeyCode.X) && ins == true)
         {
             Time.timeScale = 1;
             instrucciones.SetActive(false);

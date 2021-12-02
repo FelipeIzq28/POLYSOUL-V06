@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public GameObject canvaPausa;
     public GameObject canvaStart;
-    [SerializeField] PlayerControler player;
+    [SerializeField] EchoController player;
     
 
     private bool gamePaused = false;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     {
         canvaPausa.SetActive(true);
         gamePaused =  true;  
-        player.gamepaused = gamePaused;
+        player.gamePaused = gamePaused;
         Time.timeScale = 0f;
        
     }
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         canvaPausa.SetActive(false);
         gamePaused = false;
-        player.gamepaused = gamePaused;
+        player.gamePaused = gamePaused;
         Time.timeScale = 1;
     }
     public void ChangeLevel(int sgt)
