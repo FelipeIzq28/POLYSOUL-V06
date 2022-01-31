@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public GameObject canvaPausa;
     public GameObject canvaStart;
+    public GameObject canvaIns;
     [SerializeField] EchoController player;
     
 
     private bool gamePaused = false;
+    private bool instructions = false;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        canvaIns.SetActive(false);
         canvaPausa.SetActive(false);
         canvaStart.SetActive(true);
     }
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
                 
                 Pausa();
             }
-            
+           
         }
     }
     public void Pausa()
@@ -50,7 +53,8 @@ public class GameManager : MonoBehaviour
     }
     public void Continuar()
     {
-        canvaPausa.SetActive(false);
+        canvaIns.SetActive(false);
+        canvaPausa.SetActive(false);      
         gamePaused = false;
         player.gamePaused = gamePaused;
         Time.timeScale = 1;
@@ -61,6 +65,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sgt);
         Time.timeScale = 1;
 
+    }
+    public void Instructions()
+    {
+        canvaIns.SetActive(true);
+        gamePaused = true;
+        player.gamePaused = gamePaused;
+        Time.timeScale = 0;
+        
     }
 
     public void Salir()

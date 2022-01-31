@@ -47,11 +47,11 @@ public class BarraDeVida : MonoBehaviour
         {
             vidaActual = vidaActual - 25; 
         }
-        if (collision.CompareTag("Demon"))
+        else if (collision.CompareTag("Demon"))
         {
             vidaActual = vidaActual - 33;
         }
-        if (collision.CompareTag("Health"))
+        else if (collision.CompareTag("Health"))
         {
             vidaActual = vidaActual + 25;
         }
